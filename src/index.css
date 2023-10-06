@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +9,7 @@ body,
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +22,6 @@ body,
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: flex;
@@ -38,7 +37,7 @@ body,
 }
 
 body {
-  background: #000;
+  background: #0f1d2f;
   color: #000;
 }
 
@@ -62,6 +61,7 @@ body {
 .mySwiper {
   box-sizing: border-box;
   padding: 10px 0;
+  height: 100%;
 }
 
 .mySwiper .swiper-slide {
@@ -90,16 +90,29 @@ body {
   transition: all 0.3s;
 }
 .swiper-button-next {
-  background-image: url("https://metiz.vn/static/assets/websites/images/right-arrow.png") !important;
+  background-image: url('https://metiz.vn/static/assets/websites/images/right-arrow.png') !important;
 }
 .swiper-button-prev {
-  background-image: url("https://metiz.vn/static/assets/websites/images/left-arrow.png") !important;
+  background-image: url('https://metiz.vn/static/assets/websites/images/left-arrow.png') !important;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "";
+  content: '';
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   opacity: 1;
+}
+/* SESSION MOVIES */
+.session-movie {
+  background: url(@/assets/bgSessionMovie.png) repeat-x center;
+}
+/* Swiper List tab movie */
+.swiperTabMovie .swiper-slide img {
+  height: 370px;
+  width: 100%;
+  object-fit: fill;
+}
+.swiperTabMovie {
+  height: auto;
 }
