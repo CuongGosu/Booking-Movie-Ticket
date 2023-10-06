@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 interface PropsHeaderInfo {}
 
 const HeaderInfo: React.FC<PropsHeaderInfo> = () => {
   return (
-    <div className="text-sm h-14 w-full text-right pt-7 uppercase">
-      <div className="xl:w-1170 mx-auto container">
+    <div className="h-14 w-full pt-7 text-right text-sm uppercase">
+      <div className="container mx-auto xl:w-1170">
         <div className="mr-4 inline-block">
           Hotline: <a href="tel:0236 3630 689">0236 3630 689</a>
         </div>

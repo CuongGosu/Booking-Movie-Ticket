@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Dropdown from "./Dropdown";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import Dropdown from './Dropdown';
 interface ItemSubMenu {
   title: string;
   url: string;
@@ -17,17 +17,18 @@ interface HeaderLinkProps {
 
 const HeaderLink: React.FC<HeaderLinkProps> = ({ items, className }) => {
   const [dropdown, setDropdown] = useState(false);
-  const hoverText = "hover:text-text-highlight";
+  const hoverText = 'hover:text-text-highlight';
   return (
     <li className={`${className} group relative`}>
       {items.submenu ? (
         <div>
           <button
+            className="uppercase"
             type="button"
-            aria-expanded={dropdown ? "true" : "false"}
+            aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {items.title}{" "}
+            {items.title}{' '}
           </button>
           <Dropdown subMenus={items.submenu} />
         </div>

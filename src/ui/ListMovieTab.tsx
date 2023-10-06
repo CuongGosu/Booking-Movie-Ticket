@@ -36,7 +36,7 @@ const ListMovieTab: React.FC<ListMovieTabProps> = ({
     movies: Movie[],
     activeTab: 'nowPlaying' | 'upcoming',
   ) => {
-    const filterDate = new Date('2023-09-15');
+    const filterDate = new Date('2023-09-29');
     return movies?.filter((movie) => {
       const releaseDate = new Date(movie.movie_release);
       if (activeTab === 'nowPlaying') {
@@ -87,7 +87,7 @@ const ListMovieTab: React.FC<ListMovieTabProps> = ({
         >
           {filteredMovies?.map((movie) => (
             <SwiperSlide key={movie.movie_id}>
-              <ItemMovie movie={movie} />
+              <ItemMovie movie={movie} type="home" />
             </SwiperSlide>
           ))}
         </Swiper>
