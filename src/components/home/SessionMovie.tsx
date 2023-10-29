@@ -1,10 +1,25 @@
-import { getApiMovies } from "@/services/apiMovies";
-import { useEffect } from "react";
+import React, { useState } from 'react';
+import { useMovies } from '@/hooks/useMovies';
+import TabMovie from '@/ui/TabMovie';
+import ListMovieTab from '@/ui/ListMovieTab';
+
 interface SessionMovieProps {}
+
 const SessionMovie: React.FC<SessionMovieProps> = () => {
-  useEffect(function () {
-    getApiMovies().then((data) => console.log(data));
-  }, []);
-  return <div>asd</div>;
+  const { isLoading, movies } = useMovies();
+  const [activeTab, setActiveTab] = useState<'nowPlaying' | 'upcoming'>(
+    'nowPlaying',
+  );
+  return (
+    <div className="session-movie">
+      <TabMovie setActiveTab={setActiveTab} />
+      <ListMovieTab
+        movies={movies}
+        isLoading={isLoading}
+        activeTab={activeTab}
+      />
+    </div>
+  );
 };
+
 export default SessionMovie;

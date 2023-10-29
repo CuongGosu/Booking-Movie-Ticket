@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 // import required modules
-import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
-import imageSlide from "@/utils/imageSlide";
+import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import imageSlide from '@/utils/imageSlide';
 interface SlideHomeProps {}
 
 const SlideHome: React.FC<SlideHomeProps> = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
   SwiperCore.use([Autoplay]);
   return (
-    <div className="mx-auto xl:w-1170 container">
+    <div className="container mx-auto xl:w-1170">
       <Swiper
         loop={true}
         spaceBetween={10}
