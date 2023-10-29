@@ -1,4 +1,3 @@
-import React from 'react';
 import Spinner from '@/ui/Spinner';
 import MovieRow from '@/ui/MovieRow';
 import { useMovies } from '@/hooks/useMovies';

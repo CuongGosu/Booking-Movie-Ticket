@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 
 const StyledTable =
   'border border-gray-200 text-base bg-gray-100 rounded overflow-hidden';

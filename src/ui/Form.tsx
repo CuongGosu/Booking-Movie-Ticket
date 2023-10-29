@@ -1,4 +1,4 @@
-import React, { FC, createElement } from 'react';
+import { FC, createElement } from 'react';
 import { ReactNode } from 'react';
 
 export type classNameType = string;

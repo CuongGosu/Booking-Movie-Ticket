@@ -11,7 +11,7 @@ export function useUpdateUser() {
       toast.success('User account successfully updated');
       queryClient.setQueryData(['user'], user);
     },
-    onError: (err) => toast.error(err.message),
+    onError: (err: Error) => toast.error(err.message),
   });
 
   return { updateUser, isUpdating };

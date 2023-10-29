@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiEye, HiTrash } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 import Modal from '@/ui/Modal';

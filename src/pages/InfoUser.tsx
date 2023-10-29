@@ -75,7 +75,7 @@ const InfoUser: React.FC<PropsInfoUser> = () => {
       });
       setDate(dateChange);
     }
-    const { updateUser, isUpdating } = useUpdateUser();
+    // const { updateUser, isUpdating } = useUpdateUser();
   };
   const onSubmit = (data: updateInfoInput) => {
     let formattedDate: string | null = null; // Giá trị mặc định là null
@@ -93,7 +93,7 @@ const InfoUser: React.FC<PropsInfoUser> = () => {
 
     console.log(formattedData);
 
-    signup(formattedData);
+    // signup(formattedData);
   };
 
   return (

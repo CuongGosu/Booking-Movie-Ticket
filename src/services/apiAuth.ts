@@ -95,7 +95,8 @@ export async function updateCurrentUser({
   if (date_of_birth) updateData = { data: { date_of_birth } };
   if (cmnd) updateData = { data: { cmnd } };
 
-  const { data, error } = await supabase.auth.updateUser(updateData);
+  // const { data, error } = await supabase.auth.updateUser(updateData);
+  const { error } = await supabase.auth.updateUser(updateData);
 
   if (error) throw new Error(error.message);
 
